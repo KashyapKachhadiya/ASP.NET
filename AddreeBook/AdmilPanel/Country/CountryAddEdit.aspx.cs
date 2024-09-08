@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -32,8 +33,8 @@ namespace WebApplication1.AddreeBook.AdmilPanel.Country
             }
 
             //Establish Connection
-            SqlConnection Objconn = new SqlConnection("data source=DESKTOP-ELGAHLN;  initial catalog=AddressBookData;  Integrated Security=True;");
-
+            SqlConnection Objconn = new SqlConnection();
+            Objconn.ConnectionString = ConfigurationManager.ConnectionStrings["AddressbookConnectionString"].ConnectionString;
             try
             {
                 Objconn.Open();

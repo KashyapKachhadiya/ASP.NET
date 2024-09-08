@@ -24,8 +24,8 @@ namespace WebApplication1.AddreeBook.AdmilPanel.City
 
         private void FillCountryDropDownList()
         {
-            SqlConnection connObj = new SqlConnection("data source=DESKTOP-ELGAHLN;  initial catalog=AddressBookData;  Integrated Security=True;");
-            try
+            SqlConnection connObj = new SqlConnection();
+            connObj.ConnectionString = ConfigurationManager.ConnectionStrings["AddressbookConnectionString"].ConnectionString; try
             {
                 connObj.Open();
 
@@ -60,8 +60,8 @@ namespace WebApplication1.AddreeBook.AdmilPanel.City
 
         private void FillStateDropDownList()
         {
-            SqlConnection connObj = new SqlConnection("data source=DESKTOP-ELGAHLN;  initial catalog=AddressBookData;  Integrated Security=True;");
-            try
+            SqlConnection connObj = new SqlConnection();
+            connObj.ConnectionString = ConfigurationManager.ConnectionStrings["AddressbookConnectionString"].ConnectionString; try
             {
                 connObj.Open();
 
@@ -115,8 +115,8 @@ namespace WebApplication1.AddreeBook.AdmilPanel.City
                 return;
             }
 
-            SqlConnection connObj = new SqlConnection("data source=DESKTOP-ELGAHLN;  initial catalog=AddressBookData;  Integrated Security=True;");
-
+            SqlConnection connObj = new SqlConnection();
+            connObj.ConnectionString = ConfigurationManager.ConnectionStrings["AddressbookConnectionString"].ConnectionString;
             try
             {
                 connObj.Open();

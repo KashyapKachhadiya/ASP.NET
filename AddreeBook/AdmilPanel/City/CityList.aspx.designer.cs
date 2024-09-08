@@ -15,6 +15,24 @@ namespace WebApplication1.AddreeBook.AdmilPanel.City
     {
 
         /// <summary>
+        /// hlCountryAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlCountryAdd;
+
+        /// <summary>
+        /// lblTemp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTemp;
+
+        /// <summary>
         /// gvCity control.
         /// </summary>
         /// <remarks>
