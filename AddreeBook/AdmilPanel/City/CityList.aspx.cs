@@ -36,7 +36,10 @@ namespace WebApplication1.AddreeBook.AdmilPanel.City
 
                 cmdObj.CommandType = CommandType.StoredProcedure;
 
-                cmdObj.CommandText = "Pr_City_SelectAll";
+                cmdObj.CommandText = "Pr_City_SelectByUID";
+
+                if (Session["UserID"] != null)
+                    cmdObj.Parameters.AddWithValue("@UserID", Session["UserID"]);
 
                 SqlDataReader sdrObj = cmdObj.ExecuteReader();
 

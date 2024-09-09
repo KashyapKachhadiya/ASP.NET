@@ -50,7 +50,10 @@ namespace WebApplication1.AddreeBook.AdmilPanel.State
 
                 cmdObj.CommandType = CommandType.StoredProcedure;
 
-                cmdObj.CommandText = "Pr_State_SelectAll";
+                cmdObj.CommandText = "Pr_State_SelectByUID";
+
+                if (Session["UserID"] != null)
+                    cmdObj.Parameters.AddWithValue("@UserID", Session["UserID"]);
 
                 SqlDataReader sdrObj = cmdObj.ExecuteReader();
                 gvState.DataSource = sdrObj;

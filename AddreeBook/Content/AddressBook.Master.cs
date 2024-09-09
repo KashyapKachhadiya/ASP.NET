@@ -11,7 +11,22 @@ namespace WebApplication1.AddreeBook.Content
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserID"] == null)
+            {
+                Response.Redirect("~/AddreeBook/Default.aspx", true);
+            }
 
+            if (!Page.IsPostBack)
+            {
+                if (Session["DisplayName"] != null)
+                    lblUserName.Text = "Hi" + Session ["DisplayName"] + "!";
+            }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("~/AddreeBook/Default.aspx", true);
         }
     }
 }

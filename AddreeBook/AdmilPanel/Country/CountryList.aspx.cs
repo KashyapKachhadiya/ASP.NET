@@ -57,7 +57,10 @@ namespace WebApplication1.AddreeBook.AdmilPanel.Country
                 //cmdObj.CommandType = CommandType.Text;
 
                 //Write Query / Store Procedure
-                cmdObj.CommandText = "Pr_Country_SelectAll";
+                cmdObj.CommandText = "Pr_Country_SelectByUID";
+
+                if (Session["UserID"] != null)
+                    cmdObj.Parameters.AddWithValue("@UserID", Session["UserID"]);
 
                 //Step-3 : Read and Display Data--------------------------------------------------------------------------------------
 

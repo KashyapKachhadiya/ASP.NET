@@ -38,6 +38,12 @@
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      <asp:HyperLink ID="hlCityAddEdit" runat="server" CssClass="navbar-brand text-white" NavigateUrl="~/AddreeBook/AdmilPanel/City/CityAddEdit.aspx" Target="_self">City Add/Edit</asp:HyperLink>
                  </nav>
+
+                 <div class="col-md-4">
+                     <asp:Label runat="server" ID="lblUserName" />
+                     &nbsp;&nbsp;|&nbsp;&nbsp;
+                     <asp:LinkButton ID="LinkButton1" runat="server" Text="Logout" CssClass="btn btn-dark" OnClick="LinkButton1_Click" />
+                 </div>
              </div>
 
             <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
